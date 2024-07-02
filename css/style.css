@@ -1,0 +1,110 @@
+/* Fonts */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global variables */
+:root {
+    /* Colors */
+    --color-pure-white: #FFF;
+    --color-cream-background: #F2EAE2;
+    --color-aurometal-saurus: #6C7289;
+    --color-deep-aquamarine: #3D8168;
+    --color-deep-aquamarine-hover: #1A4032;
+    --color-gunmetal: #1C232B;
+}
+
+/* Utilities */
+.font-display {
+    font-family: "Fraunces";
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.font-body {
+    font-family: "Montserrat";
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.font-button {
+    font-family: "Montserrat";
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.font-overline {
+    font-family: "Montserrat";
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.3125rem;
+}
+
+/* Main elements styles */
+body {
+    background-color: var(--color-cream-background);
+}
+
+img {
+    width: 100%;
+}
+
+/* Component styles */
+
+/* Header */
+.header__title {
+    text-align: center;
+}
+
+/* Main */
+.product-card {
+    margin: 0 auto;
+    max-height: 28.125rem;
+    max-width: 37.5rem;
+
+    display: flex;
+}
+
+.product-card__image {
+    width: 50%;
+}
+
+.product-card__body {
+    width: 50%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card__type {
+    color: var(--color-aurometal-saurus);
+}
+
+.product-card__name {
+    margin-block-start: 1.25rem;
+    color: var(--color-gunmetal);
+}
+
+.product-card__description {
+    margin-block-start: 1.5rem;
+}
+
+/* Footer */
+.attribution {
+    text-align: center;
+}
