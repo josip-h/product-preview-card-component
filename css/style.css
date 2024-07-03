@@ -37,30 +37,40 @@
 
 .font-body {
     font-family: "Montserrat";
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
+    line-height: 1.6;
 }
 
 .font-button {
     font-family: "Montserrat";
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 700;
+    color: var(--color-pure-white);
 }
 
 .font-overline {
     font-family: "Montserrat";
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    letter-spacing: 0.3125rem;
+    letter-spacing: 0.3rem;
 }
 
 /* Main elements styles */
 body {
     background-color: var(--color-cream-background);
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 /* Component styles */
@@ -68,24 +78,21 @@ img {
 /* Header */
 .header__title {
     text-align: center;
+    padding: 3rem;
 }
 
 /* Main */
 .product-card {
-    margin: 0 auto;
-    max-height: 28.125rem;
     max-width: 37.5rem;
+    margin-inline: 2rem;
 
     display: flex;
-}
-
-.product-card__image {
-    width: 50%;
 }
 
 .product-card__body {
     width: 50%;
     padding: 2rem;
+    background-color: var(--color-pure-white);
 
     display: flex;
     flex-direction: column;
@@ -101,10 +108,96 @@ img {
 }
 
 .product-card__description {
-    margin-block-start: 1.5rem;
+    margin-block-start: 1.4rem;
+    color: var(--color-aurometal-saurus);
+}
+
+.product-card__price {
+    margin-block-start: 1.8rem;
+    color: var(--color-deep-aquamarine);
+
+    display: flex;
+    align-items: self-start;
+
+    s {
+        margin-inline-start: 1.2rem;
+        font-family: "Montserrat";
+        font-size: 0.8rem;
+        line-height: 2.3;
+        color: var(--color-aurometal-saurus);
+    }
+}
+
+.product-card__add-to-card-button {
+    margin-block-start: 2rem;
+    background-color: var(--color-deep-aquamarine);
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    i {
+        margin-inline-end: 0.5rem;
+    };
 }
 
 /* Footer */
 .attribution {
     text-align: center;
+    padding: 3rem;
+
+    a {
+        color: var(--color-deep-aquamarine);
+    }
+}
+
+/* Media queries */
+@media (max-width: 655px) {
+    .product-card {
+        max-width: 343px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-card__image {
+        max-height: 240px;
+        width: 100%;
+
+        img {
+            border-start-start-radius: 1rem;
+            border-start-end-radius: 1rem;
+        }
+    }
+
+    .product-card__body {
+        width: 100%;
+        border-end-start-radius: 1rem;
+        border-end-end-radius: 1rem;
+    }
+}
+
+@media (min-width: 656px) {
+    .product-card {
+        max-width: 600px;
+        flex-direction: row;
+    }
+    
+    .product-card__image {
+        width: 50%;
+
+        img {
+            border-start-start-radius: 1rem;
+            border-end-start-radius: 1rem;
+        }
+    }
+
+    .product-card__body {
+        width: 50%;
+        border-start-end-radius: 1rem;
+        border-end-end-radius: 1rem;
+    }
+
+    .product-card__add-to-card-button:hover {
+        background-color: var(--color-deep-aquamarine-hover);
+        cursor: pointer;
+    }
 }
