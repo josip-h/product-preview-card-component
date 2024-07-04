@@ -72,7 +72,6 @@ main {
 }
 
 img {
-    height: 100%;
     width: 100%;
     object-fit: cover;
 }
@@ -82,13 +81,13 @@ img {
 /* Header */
 .header__title {
     text-align: center;
-    padding: 3rem;
+    padding: 2em;
 }
 
 /* Main */
 .product-card {
-    max-width: 21.5rem;
-    margin-inline: 2rem;
+    max-width: 21.5em;
+    margin-inline: 2em;
 
     display: flex;
     flex-direction: column;
@@ -100,20 +99,20 @@ img {
     width: 100%;
 
     img {
+        height: 100%;
         border-start-start-radius: 1rem;
         border-start-end-radius: 1rem;
     }
 }
 
 .product-card__body {
-    width: 100%;
-    padding: 2rem;
+    padding: 2em;
     background-color: var(--color-pure-white);
 
     display: flex;
     flex-direction: column;
-    border-end-start-radius: 1rem;
-    border-end-end-radius: 1rem;
+    border-end-start-radius: 1em;
+    border-end-end-radius: 1em;
 }
 
 .product-card__type {
@@ -121,24 +120,24 @@ img {
 }
 
 .product-card__name {
-    margin-block-start: 1.25rem;
+    margin-block-start: 0.625em;
     color: var(--color-gunmetal);
 }
 
 .product-card__description {
-    margin-block-start: 1.4rem;
+    margin-block-start: 1.4em;
     color: var(--color-aurometal-saurus);
 }
 
 .product-card__price {
-    margin-block-start: 1.8rem;
+    margin-block-start: 0.875em;
     color: var(--color-deep-aquamarine);
 
     display: flex;
     align-items: self-start;
 
     s {
-        margin-inline-start: 1.2rem;
+        margin-inline-start: 1.6em;
         font-family: "Montserrat";
         font-size: 0.8rem;
         line-height: 2.3;
@@ -147,21 +146,21 @@ img {
 }
 
 .product-card__add-to-card-button {
-    margin-block-start: 2rem;
+    margin-block-start: 2.2em;
     background-color: var(--color-deep-aquamarine);
-    height: 3rem;
+    height: 3.3em;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.6em;
 
     i {
-        margin-inline-end: 0.5rem;
+        margin-inline-end: 0.6em;
     };
 }
 
 /* Footer */
 .attribution {
     text-align: center;
-    padding: 3rem;
+    padding: 3em;
 
     a {
         color: var(--color-deep-aquamarine);
@@ -171,14 +170,15 @@ img {
 /* Media queries */
 @media (min-width: 42.5rem) {
     .product-card {
-        max-width: 37.5rem;
+        max-width: 37.5em;
+        max-height: 32em;
         flex-direction: row;
-        justify-content: center;
     }
     
     .product-card__image {
-        max-height: 100%;
         width: 50%;
+        max-height: none;
+        height: 100%;
 
         img {
             border-radius: 0;
@@ -188,6 +188,7 @@ img {
     }
 
     .product-card__body {
+        height: 100%;
         width: 50%;
         border-radius: 0;
         border-start-end-radius: 1rem;
